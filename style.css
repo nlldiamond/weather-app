@@ -404,94 +404,28 @@ body.night {
   }
 }
 
-/* Adjust layout for smaller screens */
+/* Allow scrolling on smaller screens */
 @media (max-width: 768px) {
   body {
-    justify-content: flex-start; /* align content to top */
-    padding-top: 40px;           /* add space from top */
+    height: auto;          /* let body expand naturally */
+    min-height: 100vh;     /* still cover full screen */
+    overflow-y: auto;      /* enable vertical scrolling */
+    padding: 20px 10px;    /* add breathing room */
   }
 
   .weather-container {
-    text-align: center;
-    z-index: 20; /* keep above sun/moon */
+    margin-top: 40px;
   }
 
   .search-box {
-    flex-direction: column; /* stack input + button */
-    gap: 12px;
-    margin-top: 25px;
+    flex-direction: column;
+    gap: 10px;
   }
-  .search-box input {
-    width: 80%;
-    font-size: 1rem;
-    padding: 14px;
-  }
+
+  .search-box input,
   .search-box button {
-    width: 80%;
-    padding: 12px 0;
-    font-size: 1rem;
+    width: 100%;           /* take full width */
+    max-width: 300px;
   }
 
-  .sun-icon, .moon-icon {
-    width: 70px;
-    height: 70px;
-    top: 5%;
-    right: 5%;
-    z-index: 1; /* behind text */
-  }
-
-  .cloud-icon {
-    width: 100px;
-    height: 50px;
-    bottom: 18%;
-    left: 8%;
-  }
-
-  .forecast-container {
-    gap: 12px;
-    margin-top: 30px;
-  }
-  .forecast-card {
-    width: 100px;
-    padding: 12px;
-  }
-  .forecast-card h3 {
-    font-size: 1rem;
-  }
-  .forecast-card img {
-    width: 50px;
-    height: 50px;
-  }
-  .forecast-card p {
-    font-size: 0.9rem;
-  }
-}
-
-/* Extra small screens (mobile portrait) */
-@media (max-width: 480px) {
-  body {
-    padding-top: 30px;
-  }
-  .weather-container h1 {
-    font-size: 1.8rem;
-  }
-  .weather-container p {
-    font-size: 1rem;
-  }
-  .search-box input, .search-box button {
-    width: 90%;
-    font-size: 0.9rem;
-  }
-  .sun-icon, .moon-icon {
-    width: 60px;
-    height: 60px;
-    top: 5%;
-    right: 5%;
-  }
-  .cloud-icon {
-    width: 90px;
-    height: 45px;
-    bottom: 15%;
-    left: 5%;
-  }
 }
