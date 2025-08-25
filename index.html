@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Weather App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="loading" id="loading">
+    <div class="sun"></div>
+    <div class="cloud"></div>
+  </div>
+
+  <div class="weather-container">
+    <h1>Loading...</h1>
+    <p>Fetching weather data...</p>
+  </div>
+
+  <div class="weather-details"></div>
+
+  <div class="weather-visuals"></div>
+
+  <div class="forecast-container"></div>
+
+  <div class="search-box">
+    <input type="text" id="cityInput" placeholder="Enter city">
+    <button onclick="searchWeather()">Search</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

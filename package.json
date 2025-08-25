@@ -1,0 +1,16 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "Simple Weather App using REST API",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server",
+    "lint": "eslint .",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "live-server": "^1.2.2",
+    "prettier": "^3.3.0"
+  }
+}
