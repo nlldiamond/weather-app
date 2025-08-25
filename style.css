@@ -403,3 +403,95 @@ body.night {
     font-size: 0.9rem;
   }
 }
+
+/* Adjust layout for smaller screens */
+@media (max-width: 768px) {
+  body {
+    justify-content: flex-start; /* align content to top */
+    padding-top: 40px;           /* add space from top */
+  }
+
+  .weather-container {
+    text-align: center;
+    z-index: 20; /* keep above sun/moon */
+  }
+
+  .search-box {
+    flex-direction: column; /* stack input + button */
+    gap: 12px;
+    margin-top: 25px;
+  }
+  .search-box input {
+    width: 80%;
+    font-size: 1rem;
+    padding: 14px;
+  }
+  .search-box button {
+    width: 80%;
+    padding: 12px 0;
+    font-size: 1rem;
+  }
+
+  .sun-icon, .moon-icon {
+    width: 70px;
+    height: 70px;
+    top: 5%;
+    right: 5%;
+    z-index: 1; /* behind text */
+  }
+
+  .cloud-icon {
+    width: 100px;
+    height: 50px;
+    bottom: 18%;
+    left: 8%;
+  }
+
+  .forecast-container {
+    gap: 12px;
+    margin-top: 30px;
+  }
+  .forecast-card {
+    width: 100px;
+    padding: 12px;
+  }
+  .forecast-card h3 {
+    font-size: 1rem;
+  }
+  .forecast-card img {
+    width: 50px;
+    height: 50px;
+  }
+  .forecast-card p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Extra small screens (mobile portrait) */
+@media (max-width: 480px) {
+  body {
+    padding-top: 30px;
+  }
+  .weather-container h1 {
+    font-size: 1.8rem;
+  }
+  .weather-container p {
+    font-size: 1rem;
+  }
+  .search-box input, .search-box button {
+    width: 90%;
+    font-size: 0.9rem;
+  }
+  .sun-icon, .moon-icon {
+    width: 60px;
+    height: 60px;
+    top: 5%;
+    right: 5%;
+  }
+  .cloud-icon {
+    width: 90px;
+    height: 45px;
+    bottom: 15%;
+    left: 5%;
+  }
+}
